@@ -27,6 +27,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@ng-bootstrap/ng-bootstrap": "^12.1.2",
     "@popperjs/core": "^2.10.2",
+    "angular-cli-ghpages": "^0.1.0",
     "angular-responsive-carousel": "^2.1.2",
     "bootstrap": "^5.1.3",
     "hotel-reservaties": "^0.0.0",
