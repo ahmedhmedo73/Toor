@@ -56,14 +56,23 @@
 .links{
     list-style-type: none;
     display: flex;
-    li {
+    .link {
         color:#838383;
         font-size: 14px;
         margin-right: 30px;
+        cursor: pointer;
+        transition: color 0.3s;
+        &:hover{
+            color: #01b7f2;
+            fa-icon{
+                color: #01b7f2;
+            }
+        }
     }
     fa-icon{
         margin-left: 10px;
         color:#838383;
         font-size: 13px;
+        transition: color 0.3s;
     }
 }
