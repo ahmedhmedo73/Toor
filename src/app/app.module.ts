@@ -13,12 +13,14 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
+import { ListComponent } from './list/list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,

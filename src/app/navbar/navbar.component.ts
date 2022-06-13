@@ -14,17 +14,25 @@ export class NavbarComponent implements OnInit {
   faInstagram = faInstagram;
   faLinkedin =faLinkedin;
   faAngleDown = faAngleDown;
-  links:Array<string> = ['HOME','HOTELS','FLIGHTS','CRUISE','CARS','BLOG','PAGES'];
-  
+  links:any = [
+    {name : "HOME" , list : ['Home v1','Home v2']},
+    {name : "HOTELS" , list : ['Hotels Grid','Hotels Details']},
+    {name : "FLIGHTS" , list : ['Flights Grid','Flights Details']},
+    {name : "CRUISE" , list : ['Cruise Grid','Cruise Details']},
+    {name : "CARS" , list : ['Cars Grid','Cars Details']},
+    {name : "BLOG" , list : ['Blog Grid','Blog Details']},
+    {name : "PAGES" , list : ['About Us' ,'Contact Us' , "FAQ's" , 'Booking' , 'Gallery' , 'Error 404' ,'Coming Soon']},
+  ]
+  activeList:string ="";
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  showList(e:any){
-    
+  showList(name:any){
+    this.activeList = name;
   }
   hideList(){
-
+    this.activeList = "";
   }
 }
