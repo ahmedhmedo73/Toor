@@ -5,6 +5,7 @@
     padding: 13px 70px;
 }
 .socialMedia{
+    display: flex;
     fa-icon{
         color: white;
         margin-right:20px ;
@@ -13,6 +14,9 @@
     }
 }
 .account {
+    display: flex;
+    justify-content: end;
+    padding: 0;
     a{
         color: white;
         text-decoration: none;
@@ -32,25 +36,29 @@
         }
     }
 }
-.mainNav{
-    background: white;
-    padding: 13px 70px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    button{
-        color: #01b7f2;
-        border: 1px solid #01b7f2;
-        background-color: white;
-        border-radius: 30px;
-        padding: 15px 30px;
+@media screen and (max-width: 500px) {
+    .account,.socialMedia{
+        justify-content: center ;
     }
-    .right{
-        display: flex;
-        align-items: center;
-        ul{
-            margin-top: 10px;
-        }
+}
+.main-nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+button{
+    color: #01b7f2;
+    border: 1px solid #01b7f2;
+    background-color: white;
+    border-radius: 30px;
+    padding: 15px 30px;
+}
+.right{
+    display: flex;
+    justify-content: flex-end;
+    ul{
+        margin-top: 10px;
     }
 }
 .links{
@@ -76,4 +84,42 @@
         font-size: 13px;
         transition: color 0.3s;
     }
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    left:-260px;
+    transition: left 0.5s;
+    z-index: 99;
+    width: 260px;
+    height: 100vh;
+    background: #01b7f2;
+    padding-top: 60px;
+    padding-right: 10px;
+    button{
+        width: 100%;
+    }
+    ul{
+        list-style-type: none;
+        width: 100%;
+        padding-left: 10px;
+    }
+    .link{
+        background: white;
+        padding: 5px 10px;
+        color: #838383;
+        margin-bottom: 20px;
+        position: relative;
+        p{
+            display: inline-block;
+            margin-bottom: 0px;
+        }
+        fa-icon{
+            position: absolute;
+            right: 10px;
+        }
+    }
+}
+.active-side-bar{
+    left:0;
 }

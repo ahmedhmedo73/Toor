@@ -1,0 +1,104 @@
+<div class="hotelForm" [ngClass]="{'activeForm': active == 1}">
+    <form>
+        <div class="data">
+            <label >Your Destination</label><br>
+            <input type="text" placeholder="Your Destination and Hotel Name">
+        </div>
+        <div class="data">
+            <label >Check In</label><br>
+            <input type="date" >
+        </div>
+        <div class="data">
+            <label >Check Out</label><br>
+            <input type="date" >
+        </div>
+        <div class="data">
+            <label >Rooms</label><br>
+            <select name="" id="">
+                <option value="1">01</option>
+                <option value="2">02</option>
+            </select>
+        </div>
+        <div class="data">
+            <label >Adults</label><br>
+            <select name="" id="">
+                <option value="1">01</option>
+                <option value="2">02</option>
+            </select>
+        </div>
+        <div class="data">
+            <label >Kids</label><br>
+            <select name="" id="">
+                <option value="1">01</option>
+                <option value="2">02</option>
+            </select>
+        </div>
+        <button>
+            <div class="overlay"></div>
+            <p>
+                SEARCH NOW 
+            </p>
+        </button>
+    </form>
+</div>
+<div class="hotelForm" [ngClass]="{'activeForm': active == 2}">
+    <form>
+        <div class="data">
+            <label >Leaving From</label><br>
+            <input type="text" placeholder="city, district or specific airport">
+        </div>
+        <div class="data">
+            <label >Departing On</label><br>
+            <input type="date" >
+        </div>
+        <div class="data">
+            <select name="" id="" class="time">
+                <option value="Anytime">Anytime</option>
+                <option value="Morning">Morning</option>
+            </select>
+        </div>
+        <div class="data">
+            <label >Adults</label><br>
+            <select name="" id="">
+                <option value="1">01</option>
+                <option value="2">02</option>
+            </select>
+        </div>
+        <div class="data">
+            <label >Kids</label><br>
+            <select name="" id="">
+                <option value="1">01</option>
+                <option value="2">02</option>
+            </select>
+        </div>
+        <div class="data">
+            <label >Promocode</label><br>
+            <input type="text" placeholder="tyoe here">
+        </div>
+        <div class="data">
+            <label >Going From</label><br>
+            <input type="text" placeholder="city, district or specific airport">
+        </div>
+        <div class="data">
+            <label >Arriving On</label><br>
+            <input type="date" >
+        </div>
+        <div class="data">
+            <select name="" id="" class="time">
+                <option value="Anytime">Anytime</option>
+                <option value="Morning">Morning</option>
+            </select>
+        </div>
+        <div class="data">
+            <label >Infants</label><br>
+            <select name="" id="" class="Infants">
+                <option value="1">01</option>
+                <option value="2">02</option>
+            </select>
+        </div>
+        <button class="searchFlights">
+            <div class="overlay"></div>
+            <p>SEARCH</p>
+        </button>
+    </form>
+</div>

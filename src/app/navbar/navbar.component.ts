@@ -9,6 +9,7 @@ import {faAngleDown} from '@fortawesome/free-solid-svg-icons' ;
 })
 export class NavbarComponent implements OnInit {
 
+  activeSideBar : Boolean = false;
   faFacebookF = faFacebookF;
   faTwitter = faTwitter;
   faInstagram = faInstagram;

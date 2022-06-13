@@ -1,36 +1,55 @@
 <nav>
     <div class="upperNav">
-        <div class="socialMedia">
-            <fa-icon [icon] = "faFacebookF" ></fa-icon>
-            <fa-icon [icon] = "faTwitter" ></fa-icon>
-            <fa-icon [icon] = "faInstagram" ></fa-icon>
-            <fa-icon [icon] = "faLinkedin" ></fa-icon>
-        </div>
-        <div class="account">
-            <a [routerLink]='["/login"]' class="">LOGIN</a>
-            <a [routerLink]='["/login"]'>SIGNUP</a>
-            <select >
-                <option value="USD">USD</option>
-                <option value="INR">INR</option>
-                <option value="EURO">EURO</option>
-            </select>
+        <div class="container">
+            <div class="row">
+                <div class="socialMedia col-md-6">
+                    <fa-icon [icon] = "faFacebookF" ></fa-icon>
+                    <fa-icon [icon] = "faTwitter" ></fa-icon>
+                    <fa-icon [icon] = "faInstagram" ></fa-icon>
+                    <fa-icon [icon] = "faLinkedin" ></fa-icon>
+                </div>
+                <div class="account col-md-6">
+                    <a [routerLink]='["/login"]' class="">LOGIN</a>
+                    <a [routerLink]='["/login"]'>SIGNUP</a>
+                    <select >
+                        <option value="USD">USD</option>
+                        <option value="INR">INR</option>
+                        <option value="EURO">EURO</option>
+                    </select>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="mainNav">
-        <div class="left">
-            <a>
-                <img src="https://themes.codezion.com/angular/toor/assets/images/toor-logo.png" alt="">
-            </a>
-        </div>
-        <div class="right">
-            <ul class="links">
-                <li *ngFor="let link of links" class="link" (mouseenter)="showList(link.name)" (mouseleave)="hideList()">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container d-flex justify-content-between">
+          <a class="navbar-brand">
+            <img src="https://themes.codezion.com/angular/toor/assets/images/toor-logo.png" alt="">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click) = "activeSideBar = !activeSideBar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav main-nav mb-2 mb-lg-0 links">
+                <li *ngFor="let link of links" class="link nav-item active" (mouseenter)="showList(link.name)" (mouseleave)="hideList()">
                     {{link.name}} 
                     <fa-icon [icon] = "faAngleDown"></fa-icon> 
                     <app-list *ngIf="link.name == activeList" [lists] ="link.list"></app-list>
                 </li>
+                <button>ENQUIRY NOW</button>
             </ul>
-            <button>ENQUIRY NOW</button>
+          </div>
         </div>
+    </nav>
+    <div class="sidebar" [ngClass]="{'active-side-bar': activeSideBar}">
+        <ul>
+            <li *ngFor="let link of links" class="link nav-item active" (mouseenter)="showList(link.name)" (mouseleave)="hideList()">
+                <p>
+                    {{link.name}} 
+                </p>
+                <fa-icon [icon] = "faAngleDown"></fa-icon> 
+                <app-list *ngIf="link.name == activeList" [lists] ="link.list"></app-list>
+            </li>
+            <button>ENQUIRY NOW</button>
+        </ul>
     </div>
 </nav>

@@ -14,13 +14,15 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { ListComponent } from './list/list.component';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    ListComponent
+    ListComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,

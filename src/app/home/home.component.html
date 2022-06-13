@@ -93,60 +93,18 @@
         </div>
     </div>
     <div class="forms">
-        <div class="hotelForm" [ngClass]="{'activeForm': active == 1}">
-            <form>
-                <div class="data">
-                    <label >Your Destination</label><br>
-                    <input type="text" placeholder="Your Destination and Hotel Name">
-                </div>
-                <div class="data">
-                    <label >Check In</label><br>
-                    <input type="date" >
-                </div>
-                <div class="data">
-                    <label >Check Out</label><br>
-                    <input type="date" >
-                </div>
-                <div class="data">
-                    <label >Rooms</label><br>
-                    <select name="" id="">
-                        <option value="1">01</option>
-                        <option value="2">02</option>
-                    </select>
-                </div>
-                <div class="data">
-                    <label >Adults</label><br>
-                    <select name="" id="">
-                        <option value="1">01</option>
-                        <option value="2">02</option>
-                    </select>
-                </div>
-                <div class="data">
-                    <label >Kids</label><br>
-                    <select name="" id="">
-                        <option value="1">01</option>
-                        <option value="2">02</option>
-                    </select>
-                </div>
-                <button>
-                    <div class="overlay"></div>
-                    <p>
-                        SEARCH NOW 
-                    </p>
-                </button>
-            </form>
-        </div>
+        <app-form [active] = "active"></app-form>
     </div>
 </div>
 <div class="about">
     <div class="container">
         <div class="row">
-            <div class="col-md-5 video">
+            <div class="col-lg-5 video">
                 <div class="back"></div>
                 <img src="https://themes.codezion.com/angular/toor/assets/images/about.jpg" alt="">
                 <div class="play"></div>
             </div>
-            <div class="col-md-7">
+            <div class="col-lg-7">
                 <h3>About Us</h3>
                 <i class="fa-solid fa-plane"></i>
                 <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</h4>
@@ -180,9 +138,16 @@
     </div>
 </div>
 <div class="recommendedHotels">
-    <h2>Recommended Hotels</h2>
-    <i class="fa-solid fa-plane"></i>
-    <p class="des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Recommended Hotels</h2>
+                <i class="fa-solid fa-plane"></i>
+                <p class="des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+
+            </div>
+        </div>
+    </div>
     <owl-carousel-o [options]="customOptions" class="hotels">
         <ng-template carouselSlide *ngFor="let hotel of hotels" >
             <div class="card">

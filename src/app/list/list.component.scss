@@ -17,3 +17,13 @@ li{
         background: #00a3c8;
     }
 }
+@media  screen and (max-width: 500px) {
+    ul{
+        left:0;
+        top:5px;
+    }li{
+        width: 240px;
+        background: #04afe7;
+    }
+
+}
