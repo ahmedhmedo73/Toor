@@ -1,0 +1,310 @@
+.offers {
+    .carousel-item {
+        background-position: center;
+        background-size: cover;
+        height: 700px;
+    }
+
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+        border: 1px solid white;
+        border-radius: 50%;
+    }
+
+    .carousel-control-prev {
+        margin-left: -60px;
+        margin-top: 400px;
+        height: 10px;
+    }
+
+    .carousel-control-next {
+        margin-right: -60px;
+        margin-top: 400px;
+        height: 10px;
+    }
+
+    .carousel {
+        overflow: hidden;
+    }
+
+    .carousel-item {
+        position: relative;
+    }
+
+    .detailes {
+        position: absolute;
+        margin-top: 150px;
+        margin-left: 60px;
+        width: 700px;
+
+        h2,
+        li {
+            color: white;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0px;
+
+            li {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+
+            i {
+                font-size: 17px;
+                color: #01b7f2;
+                width: 30px;
+                margin: auto;
+            }
+        }
+
+        h2 {
+            font-size: 65px;
+            margin-bottom: 30px;
+
+            span {
+                color: #01b7f2;
+            }
+        }
+
+        .find {
+            width: 200px;
+            height: 40px;
+            color: white;
+            background: #2d3e52;
+            border: 0px;
+            border-radius: 50px;
+            position: relative;
+            overflow: hidden;
+            p{
+                position: absolute;
+                z-index: 2;
+                top:6px;
+                left:35px;
+            }
+            .overlay{
+                position: absolute;
+                top:0;
+                left: -100%;
+                border-radius: 30px;
+                width: 100%;
+                height: 100%;
+                background: #00a3c8;
+                transition: left 0.5s;
+                z-index: 1;
+            }
+            &:hover{
+                color: white;
+                .overlay{
+                    left: 0;
+                }
+            }
+        }
+    }
+
+    .overlay {
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.322);
+    }
+}
+.booking{
+    transform: translateY(-50px);
+    .types{
+        display: flex;
+        margin-left: 60px;
+        .type{
+            position: relative;
+            width: 120px;
+            height: 45px;
+            background: #ffffff8c;
+            transition: background-color 0.5s;
+            margin-right: 5px;
+            cursor: pointer;
+            border-bottom: 2px #01b7f2 solid;
+            .cont{
+                position: relative;
+                overflow: hidden;
+                text-align: center;
+                width: 100%;
+                height: 100%;
+            }
+            p{
+                position: absolute;
+                font-weight: 500;
+                z-index: 2;
+                top: 10px;
+                left: 40px;
+                transition: color 0.5s;
+            }
+            .overlay{
+                position: absolute;
+                z-index: 1;
+                width: 100%;
+                height: 100%;
+                top:0;
+                left:-100%;
+                transition: left .5s;
+                background: #00a3c8;
+            }
+            &:hover{
+                background: #01b7f2;
+                .overlay{
+                    left:0;
+                }
+                p{
+                    color: white;
+                }
+            }
+        }
+        .activeType{
+            background: #01b7f2;
+            color: white;
+            &::after{
+                content: "";
+                position: absolute;
+                bottom: -16px;
+                left:50px;
+                width: 0px;
+                height: 0px;
+                border-left: 7px solid transparent;
+                border-top: 7px solid transparent;
+                border-bottom: 7px solid transparent;
+                border-right: 7px solid #01b7f2;
+                transform: rotate(-90deg);
+            }
+        }
+    }
+    .forms{
+        width: 90%;
+        margin-left: 60px;
+        form{
+            display: flex;
+        }
+        .hotelForm{
+            padding: 20px;
+            display: none;
+            box-shadow: 0 0 8px #0000001a;
+            background: white;
+        }
+        .activeForm{
+            display: inline-block;
+        }
+        .data{
+            margin-right: 15px;
+        }
+        label{
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        input,select,button{
+            border-radius: 30px;
+            padding: 10px;
+            width: 260px;
+            border: 2px solid #efefef;
+            transition: border 0.2s;
+            background:#f5f5f5 ;
+            &:focus{
+                outline: 0px;
+                border-bottom: 2px solid #01b7f2;
+                background: white;
+            }
+        }
+        input[type="date"]{
+            width: 180px;
+        }
+        select{
+            width: 70px;
+            cursor: pointer;
+        }
+        button{
+            padding: 5px;
+            height: 38px;
+            width: 180px;
+            margin-top: 40px;
+            background: white;
+            color: #01b7f2;
+            border: 1px solid #01b7f2;
+            transition: color 0.2s;
+            position: relative;
+            overflow: hidden;
+            p{
+                position: absolute;
+                z-index: 2;
+                top:6px;
+                left:35px;
+            }
+            .overlay{
+                position: absolute;
+                top:0;
+                left: -100%;
+                border-radius: 30px;
+                width: 100%;
+                height: 100%;
+                background: #00a3c8;
+                transition: left 0.3s;
+                z-index: 1;
+            }
+            &:hover{
+                color: white;
+                .overlay{
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+.recommendedHotels {
+    background: #f5f5f5;
+    height: fit-content;
+    width: 100%;
+    padding: 50px;
+    .des {
+        width: 600px;
+        color: #838383;
+    }
+
+    i {
+        color: #01b7f2;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 7px;
+            left: 18px;
+            width: 50px;
+            height: 2px;
+            background: #01b7f2;
+        }
+    }
+
+    .card{
+        height: 300px;
+        width: 300px;
+        p{
+            font-size: 12px;
+        }
+        img{
+            height: 50%;
+        }
+        .view,.book{
+            width: 100px;
+            height: 30px;
+            background: white;
+            color: #01b7f2;
+            border: 1px solid #01b7f2;
+            border-radius: 20px;
+        }
+        .view{
+            color: white;
+            border: 1px solid #2d3e52;
+            background: #2d3e52;
+        }
+        margin-bottom: 30px;
+    }
+}
+.slider{
+    height: 200px;
+}

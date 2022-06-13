@@ -1,0 +1,32 @@
+<nav>
+    <div class="upperNav">
+        <div class="socialMedia">
+            <fa-icon [icon] = "faFacebookF" ></fa-icon>
+            <fa-icon [icon] = "faTwitter" ></fa-icon>
+            <fa-icon [icon] = "faInstagram" ></fa-icon>
+            <fa-icon [icon] = "faLinkedin" ></fa-icon>
+        </div>
+        <div class="account">
+            <a [routerLink]='["/login"]' class="">LOGIN</a>
+            <a [routerLink]='["/login"]'>SIGNUP</a>
+            <select >
+                <option value="USD">USD</option>
+                <option value="INR">INR</option>
+                <option value="EURO">EURO</option>
+            </select>
+        </div>
+    </div>
+    <div class="mainNav">
+        <div class="left">
+            <a>
+                <img src="https://themes.codezion.com/angular/toor/assets/images/toor-logo.png" alt="">
+            </a>
+        </div>
+        <div class="right">
+            <ul class="links">
+                <li *ngFor="let link of links">{{link}} <fa-icon [icon] = "faAngleDown"></fa-icon> </li>
+            </ul>
+            <button>ENQUIRY NOW</button>
+        </div>
+    </div>
+</nav>

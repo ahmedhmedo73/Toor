@@ -1,0 +1,173 @@
+<div class="offers">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-pause = "hover">
+        <div class="carousel-inner">
+        <div class="carousel-item active" style="background-image: url('https://themes.codezion.com/angular/toor/assets/images/car-1.jpg');">
+            <div class="overlay">
+                <div class="detailes">
+                    <h2>Upto 25% off on first booking <span>Car</span> through your app!</h2>
+                    <ul>
+                        <li> <i class="fa-solid fa-dollar-sign"></i> Best price Guaranteed</li>
+                        <li> <i class="fa-solid fa-car"></i> Home Pickups</li>
+                        <li> <i class="fa-solid fa-laptop"></i> Easy Bookings</li>
+                        <li> <i class="fa-solid fa-headphones-simple"></i> 24/7 Customer Care</li>
+                    </ul>
+                    <button class="find">
+                        <div class="overlay"></div>
+                        <p>
+                            FIND OUT MORE 
+                        </p>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item " style="background-image: url('https://themes.codezion.com/angular/toor/assets/images/hotel-1.jpg');">
+            <div class="overlay">
+                <div class="detailes">
+                    <h2>Finest Luxury<span>Hotels</span> in Moritz</h2>
+                    <ul>
+                        <li><i class="fa-solid fa-building"></i> Over 1000 Hotels</li>
+                        <li><i class="fa-solid fa-location-dot"></i> More than 500,000 places</li>
+                        <li><i class="fa-solid fa-dollar-sign"></i> Best Price Hotels</li>
+                        <li><i class="fa-solid fa-comments"></i> Customer Care 24 hours</li>
+                    </ul>
+                    <button class="find">
+                        <div class="overlay"></div>
+                        <p>
+                            FIND OUT MORE 
+                        </p>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item " style="background-image: url('https://themes.codezion.com/angular/toor/assets/images/flight-2.jpg');">
+            <div class="overlay">
+                <div class="detailes">
+                    <h2>Let's Discover the <span>world</span> together!</h2>
+                    <ul>
+                        <li><i class="fa-solid fa-plane"></i> Over 500 AirLines</li>
+                        <li><i class="fa-solid fa-location-dot"></i> More than 13,000 places</li>
+                        <li><i class="fa-solid fa-dollar-sign"></i> Best Price Guarantee</li>
+                        <li> <i class="fa-solid fa-comments"></i> Customer Care</li>
+                    </ul>
+                    <button class="find">
+                        <div class="overlay"></div>
+                        <p>
+                            FIND OUT MORE 
+                        </p>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+<div class="booking">
+    <div class="types">
+        <div class="type" [ngClass]="{'activeType' : active == 1}" (click)="setActive(1)">
+            <div class="cont">
+                <div class="overlay"></div><p>Hotel</p>
+            </div>
+        </div>
+        <div class="type" [ngClass]="{'activeType' : active == 2}" (click)="setActive(2)">
+            <div class="cont">
+                <div class="overlay"></div><p>Flights</p>
+            </div>
+        </div>
+        <div class="type" [ngClass]="{'activeType' : active == 3}" (click)="setActive(3)">
+            <div class="cont">
+                <div class="overlay"></div><p>Cruise</p>
+            </div>
+        </div>
+        <div class="type" [ngClass]="{'activeType' : active == 4}" (click)="setActive(4)">
+            <div class="cont">
+                <div class="overlay"></div><p>Cars</p>
+            </div>
+        </div>
+    </div>
+    <div class="forms">
+        <div class="hotelForm" [ngClass]="{'activeForm': active == 1}">
+            <form>
+                <div class="data">
+                    <label >Your Destination</label><br>
+                    <input type="text" placeholder="Your Destination and Hotel Name">
+                </div>
+                <div class="data">
+                    <label >Check In</label><br>
+                    <input type="date" >
+                </div>
+                <div class="data">
+                    <label >Check Out</label><br>
+                    <input type="date" >
+                </div>
+                <div class="data">
+                    <label >Rooms</label><br>
+                    <select name="" id="">
+                        <option value="1">01</option>
+                        <option value="2">02</option>
+                    </select>
+                </div>
+                <div class="data">
+                    <label >Adults</label><br>
+                    <select name="" id="">
+                        <option value="1">01</option>
+                        <option value="2">02</option>
+                    </select>
+                </div>
+                <div class="data">
+                    <label >Kids</label><br>
+                    <select name="" id="">
+                        <option value="1">01</option>
+                        <option value="2">02</option>
+                    </select>
+                </div>
+                <button>
+                    <div class="overlay"></div>
+                    <p>
+                        SEARCH NOW 
+                    </p>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="recommendedHotels">
+    <h2>Recommended Hotels</h2>
+    <i class="fa-solid fa-plane"></i>
+    <p class="des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+    <owl-carousel-o [options]="customOptions" class="hotels">
+        <ng-template carouselSlide *ngFor="let hotel of hotels" >
+            <div class="card">
+                <img [src]="src + hotel.cover" alt="">
+                <div class="container detail p-3">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h5>{{hotel.name}}</h5>
+                            <p>{{hotel.description}}</p>
+                        </div>
+                        <div class="col-md-4  d-flex justify-content-end">
+                            <p>AVG/NIGHT</p>
+                            <p>$220</p>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <button class="view">VIEW</button>
+                        <button class="book">BOOK</button>
+                    </div>
+                </div>
+            </div>
+        </ng-template> 
+    </owl-carousel-o>
+    <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide *ngFor="let slider of sliders" >
+            <img [src]="src + slider.photo" alt="" class="slider">
+        </ng-template> 
+    </owl-carousel-o>
+</div>
