@@ -15,9 +15,16 @@ export class NavbarComponent implements OnInit {
   faLinkedin =faLinkedin;
   faAngleDown = faAngleDown;
   links:Array<string> = ['HOME','HOTELS','FLIGHTS','CRUISE','CARS','BLOG','PAGES'];
+  
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  showList(e:any){
+    
+  }
+  hideList(){
+
+  }
 }

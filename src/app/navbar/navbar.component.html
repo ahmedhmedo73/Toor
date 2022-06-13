@@ -24,7 +24,7 @@
         </div>
         <div class="right">
             <ul class="links">
-                <li *ngFor="let link of links" class="link">{{link}} <fa-icon [icon] = "faAngleDown"></fa-icon> </li>
+                <li *ngFor="let link of links" class="link" (mouseenter)="showList($event)" (mouseenter)="hideList()">{{link}} <fa-icon [icon] = "faAngleDown"></fa-icon> </li>
             </ul>
             <button>ENQUIRY NOW</button>
         </div>
